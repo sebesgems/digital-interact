@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    sebes_digital_interact (0.1.2)
+    sebes_digital_interact (0.1.0)
 
 GEM
   remote: https://rubygems.org/

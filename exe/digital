@@ -13,7 +13,7 @@ unless env && COMMANDS.include?(command)
 end
 
 require 'dotenv'
-p Dotenv.load('exe/envs.env')
+Dotenv.load('.env.digital')
 
 # Define constants for environment variable keys
 ENVIRONMENTS = {
@@ -38,7 +38,7 @@ web_name = ENV[env_details[:web_name]]
 # Ensure necessary environment variables are set
 unless app_id && web_name
   puts "Missing environment variables for #{env_details[:label]}."
-  puts "Please define #{env_details[:app_id]} and #{env_details[:web_name]}"
+  puts "Please define #{env_details[:app_id]} and #{env_details[:web_name]} in .env.digital"
   exit 1
 end
 
