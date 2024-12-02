@@ -42,16 +42,17 @@ https://docs.digitalocean.com/reference/doctl/how-to/install/
 
 Access Digital Ocean doctl commands 
 
+### Logs
 ```
- bundle exec digital -s log -f
-
+ bundle exec digital -s log (-f|--tail n) 
 ```
 
+### Access Platform App console
 ```
  bundle exec digital -s console
 ```
 
-
+### Get last 5 deployments' statuses
 ```
  bundle exec digital -s status
 ```
