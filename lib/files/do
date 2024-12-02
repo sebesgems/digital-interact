@@ -1,8 +1,0 @@
-#!/usr/bin/env ruby
-require "fileutils"
-
-APP_ROOT = File.expand_path("..", __dir__)
-
-FileUtils.chdir APP_ROOT do
-    system "./scripts/do/#{ARGV.first}.sh #{ARGV[1]} #{ARGV[2..].join(' ')}"
-end

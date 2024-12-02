@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-require_relative 'sebes_do_interact/version'
+require_relative 'sebes_digital_interact/version'
 
-require 'my_gem/railtie' if defined?(Rails::Railtie)
+require 'sebes_digital_interact/railtie' if defined?(Rails::Railtie)
 
 module SebesDoInteract
   class Error < StandardError; end
