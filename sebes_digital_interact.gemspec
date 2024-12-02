@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
-require_relative 'lib/sebes_do_interact/version'
+require_relative 'lib/sebes_digital_interact/version'
 
 Gem::Specification.new do |spec|
-  spec.name = 'sebes_do_interact'
+  spec.name = 'sebes_digital_interact'
   spec.version = SebesDigitalInteract::VERSION
   spec.authors = ['Sebes Technology ltd']
 
