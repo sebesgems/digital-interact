@@ -27,6 +27,12 @@ In the projects Settings -> Actions -> New Secret add:
 SEBES_GEM_TOKEN=-> LastPass -> Shared-dev -> SEBES_GEM_TOKEN
 ```
 
+## Authenticate locally
+
+```
+bundle config --local github.com -> LastPass -> Shared-dev -> SEBES_GEM_TOKEN
+```
+
 ## Envs
 
 Please set up in the project envs in `.env.digital`:
