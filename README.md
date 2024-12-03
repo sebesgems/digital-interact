@@ -19,6 +19,14 @@ jobs:
       BUNDLE_GITHUB__COM: x-access-token:${{ secrets.SEBES_GEM_TOKEN }}
 ```
 
+## Access for GitHub actions 
+
+In the projects Settings -> Actions -> New Secret add:
+
+```
+SEBES_GEM_TOKEN=-> LastPass -> Shared-dev -> SEBES_GEM_TOKEN
+```
+
 ## Envs
 
 Please set up in the project envs in `.env.digital`:
