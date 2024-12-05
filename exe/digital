@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 require 'fileutils'
 
-COMMANDS = %w[console log status]
+COMMANDS = %w[console logs status]
 
 env = ARGV[0]
 command = ARGV[1]
