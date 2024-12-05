@@ -7,7 +7,7 @@ Add to Gemfile:
 ```
 gem "sebes_digital_interact", group: %i[development test], git: "https://github.com/sebestech/gem-digital-interact.git"
 ```
-You have to add both locally and to the DigitalOcean server env:
+You have to add to the DigitalOcean server env:
 ```
 BUNDLE_GITHUB__COM= -> LastPass -> Shared-dev -> SEBES_GEM_TOKEN
 ```
