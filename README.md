@@ -58,7 +58,7 @@ Access Digital Ocean doctl commands
 
 ### Logs
 ```
- bundle exec digital -s log (-f|--tail n) 
+ bundle exec digital -s logs (-f|--tail n) 
 ```
 
 ### Access Platform App console
