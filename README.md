@@ -30,7 +30,7 @@ SEBES_GEM_TOKEN=-> LastPass -> Shared-dev -> SEBES_GEM_TOKEN
 ## Authenticate locally
 
 ```
-bundle config --local github.com -> LastPass -> Shared-dev -> SEBES_GEM_TOKEN
+bundle config --local github.com {-> LastPass -> Shared-dev -> SEBES_GEM_TOKEN}
 ```
 
 ## Envs
