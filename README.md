@@ -5,7 +5,9 @@ This is an interface for doctl, which helps to automate interactions with Digita
 ## Install into the project
 Add to Gemfile:
 ```
-gem "sebes_digital_interact", group: %i[development test], git: "https://github.com/sebestech/gem-digital-interact.git"
+group: %i[development test] do
+  gem "sebes_digital_interact", require: false, git: "https://github.com/sebestech/gem-digital-interact.git"
+end
 ```
 You have to add to the DigitalOcean server env:
 ```
