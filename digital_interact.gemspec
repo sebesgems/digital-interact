@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
-require_relative 'lib/sebes_digital_interact/version'
+require_relative 'lib/digital_interact/version'
 
 Gem::Specification.new do |spec|
-  spec.name = 'sebes_digital_interact'
-  spec.version = SebesDigitalInteract::VERSION
+  spec.name = 'digital_interact'
+  spec.version = DigitalInteract::VERSION
   spec.authors = ['Sebes Technology ltd']
 
   spec.summary = 'Allows to interact with Digital Ocean'
@@ -15,7 +15,7 @@ Gem::Specification.new do |spec|
   spec.files = IO.popen(%w[git ls-files -z], chdir: __dir__, err: IO::NULL) do |ls|
     ls.readlines("\x0", chomp: true).reject do |f|
       (f == gemspec) ||
-        f.start_with?(*%w[bin/ test/ spec/ features/ .git appveyor Gemfile sebes_digital_interact-])
+        f.start_with?(*%w[bin/ test/ spec/ features/ .git appveyor Gemfile digital_interact-])
     end
   end
   spec.bindir      = 'exe'

@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    sebes_digital_interact (0.1.0)
+    digital_interact (0.2.0)
 
 GEM
   remote: https://rubygems.org/
@@ -13,8 +13,8 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  digital_interact!
   rake (~> 13.0)
-  sebes_digital_interact!
 
 BUNDLED WITH
    2.5.11

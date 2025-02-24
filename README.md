@@ -6,6 +6,7 @@ This is an interface for doctl, which helps to automate interactions with Digita
 
 - Instal `doctl` https://docs.digitalocean.com/reference/doctl/how-to/install/
 - Please follow the instruaction to generate the token https://docs.digitalocean.com/reference/api/create-personal-access-token/#:~:text=To%20use%20the%20DigitalOcean%20API,Authorization%20header%20with%20your%20request.&text=Keep%20your%20tokens%20secret.
+  - You have to grant `full access`
 - Then `doctl auth init --context "name-of-the-token"
 - Don't forget to check that you are using correct context `doctl auth list`
 
@@ -13,33 +14,8 @@ This is an interface for doctl, which helps to automate interactions with Digita
 Add to Gemfile:
 ```
 group: %i[development test] do
-  gem "sebes_digital_interact", require: false, git: "https://github.com/sebestech/gem-digital-interact.git"
+  gem "digital_interact", require: false, git: "https://github.com/sebestech/gem-digital-interact.git"
 end
-```
-You have to add to the DigitalOcean server env:
-```
-BUNDLE_GITHUB__COM= -> LastPass -> Shared-dev -> SEBES_GEM_TOKEN
-```
-To `.github/workflow/ci.yml` should be added:
-```
-jobs:
-  lint:
-    env:
-      BUNDLE_GITHUB__COM: x-access-token:${{ secrets.SEBES_GEM_TOKEN }}
-```
-
-## Access for GitHub actions 
-
-In the projects Settings -> Actions -> New Secret add:
-
-```
-SEBES_GEM_TOKEN=-> LastPass -> Shared-dev -> SEBES_GEM_TOKEN
-```
-
-## Authenticate locally
-
-```
-bundle config --local github.com {-> LastPass -> Shared-dev -> SEBES_GEM_TOKEN}
 ```
 
 ## Envs
