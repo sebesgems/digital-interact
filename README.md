@@ -2,6 +2,10 @@
 
 This is an interface for doctl, which helps to automate interactions with Digital Ocean in `staging` and `production` envs.
 
+## Generate auth token
+
+Please follow the instruaction https://docs.digitalocean.com/reference/api/create-personal-access-token/#:~:text=To%20use%20the%20DigitalOcean%20API,Authorization%20header%20with%20your%20request.&text=Keep%20your%20tokens%20secret.
+
 ## Install into the project
 Add to Gemfile:
 ```
