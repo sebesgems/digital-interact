@@ -7,6 +7,7 @@ This is an interface for doctl, which helps to automate interactions with Digita
 - Instal `doctl` https://docs.digitalocean.com/reference/doctl/how-to/install/
 - Please follow the instruaction to generate the token https://docs.digitalocean.com/reference/api/create-personal-access-token/#:~:text=To%20use%20the%20DigitalOcean%20API,Authorization%20header%20with%20your%20request.&text=Keep%20your%20tokens%20secret.
 - Then `doctl auth init --context "name-of-the-token"
+- Don't forget to check that you are using correct context `doctl auth list`
 
 ## Install into the project
 Add to Gemfile:
