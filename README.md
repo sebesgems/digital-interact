@@ -46,6 +46,12 @@ Access Digital Ocean doctl commands
  bundle exec digital -s logs (-f|--tail n) 
 ```
 
+### Stub bin
+
+```
+bundle binstub digital_interact
+```
+
 ### Access Platform App console
 ```
  bundle exec digital -s console
