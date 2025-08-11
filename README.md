@@ -39,25 +39,40 @@ https://docs.digitalocean.com/reference/doctl/how-to/install/
 
 ## Usage
 
-Access Digital Ocean doctl commands 
+Access Digital Ocean doctl commands. The production environment (`-p`) is used by default if no environment flag is specified.
 
 ### Logs
-```
- bundle exec digital (-s|-p|[empty by default -p]) logs (-f|--tail n)
+```bash
+# Production (default)
+bundle exec digital logs (-f|--tail n)
+
+# Explicit production
+bundle exec digital -p logs (-f|--tail n)
+
+# Staging
+bundle exec digital -s logs (-f|--tail n)
 ```
 
 ### Stub bin
 
-```
+```bash
 bundle binstub digital_interact
 ```
 
 ### Access Platform App console
-```
- bundle exec digital -s console
+```bash
+# Production (default)
+bundle exec digital console
+
+# Staging
+bundle exec digital -s console
 ```
 
 ### Get last 5 deployments' statuses
-```
- bundle exec digital -s status
+```bash
+# Production (default)
+bundle exec digital status
+
+# Staging
+bundle exec digital -s status
 ```

@@ -3,12 +3,22 @@ require 'fileutils'
 
 COMMANDS = %w[console logs status].freeze
 
-env = ARGV[0]
-command = ARGV[1]
-optional_args = ARGV[2..]&.join(' ')
+# Check if first argument is a command (default to production) or environment flag
+if COMMANDS.include?(ARGV[0])
+  # First argument is a command, default to production environment
+  env = '-p'
+  command = ARGV[0]
+  optional_args = ARGV[1..]&.join(' ')
+else
+  # First argument is environment flag
+  env = ARGV[0]
+  command = ARGV[1]
+  optional_args = ARGV[2..]&.join(' ')
+end
 
 unless COMMANDS.include?(command)
-  puts "Usage: do -s|-p|(empty will be -p) #{COMMANDS.join('|')} --optional-args"
+  puts "Usage: digital [-s|-p] #{COMMANDS.join('|')} [--optional-args]"
+  puts 'Environment defaults to production (-p) if not specified'
   exit 1
 end
 
@@ -29,7 +39,7 @@ ENVIRONMENTS = {
   }
 }.freeze
 
-env_details = ENVIRONMENTS[env || '-p']
+env_details = ENVIRONMENTS[env]
 
 # Extract environment variables
 app_id = ENV[env_details[:app_id]]
