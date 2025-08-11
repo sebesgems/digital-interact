@@ -43,7 +43,7 @@ Access Digital Ocean doctl commands
 
 ### Logs
 ```
- bundle exec digital -s logs (-f|--tail n) 
+ bundle exec digital (-s|-p|[empty by default -p]) logs (-f|--tail n)
 ```
 
 ### Stub bin
