@@ -32,6 +32,11 @@ ENVIRONMENTS = {
     web_name: 'PRODUCTION_WEB_NAME',
     label: 'PRODUCTION'
   },
+  '-pre' => {
+    app_id: 'PRE_PROD_APP_ID',
+    web_name: 'PRE_PROD_WEB_NAME',
+    label: 'PRE_PROD'
+  },
   '-s' => {
     app_id: 'STAGING_APP_ID',
     web_name: 'STAGING_WEB_NAME',
