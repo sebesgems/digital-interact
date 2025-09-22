@@ -27,6 +27,9 @@ PRODUCTION_WEB_NAME=huchob
 
 STAGING_APP_ID=8378e7d2-5599-48cc-be97-d8b64039d46f
 STAGING_WEB_NAME=huchob-staging
+
+PRE_PROD_APP_ID=36d0e2c1-8234-4b92-b378-26200024de5f
+PRE_PROD_WEB_NAME=huchob-pre-prod
 ```
 
 
@@ -49,6 +52,9 @@ bundle exec digital logs (-f|--tail n)
 # Explicit production
 bundle exec digital -p logs (-f|--tail n)
 
+# pre-prod
+bundle exec digital -pre logs (-f|--tail n)
+
 # Staging
 bundle exec digital -s logs (-f|--tail n)
 ```
@@ -64,6 +70,9 @@ bundle binstub digital_interact
 # Production (default)
 bundle exec digital console
 
+# pre-prod
+bundle exec digital -pre console
+
 # Staging
 bundle exec digital -s console
 ```
@@ -72,6 +81,9 @@ bundle exec digital -s console
 ```bash
 # Production (default)
 bundle exec digital status
+
+# pre-prod
+bundle exec digital -pre status
 
 # Staging
 bundle exec digital -s status
