@@ -44,11 +44,16 @@ ENVIRONMENTS = {
   }
 }.freeze
 
-env_details = ENVIRONMENTS[env]
-
-# Extract environment variables
-app_id = ENV[env_details[:app_id]]
-web_name = ENV[env_details[:web_name]]
+  # Extract environment variables based on selected environment
+  if ENVIRONMENTS[env]
+    env_details = ENVIRONMENTS[env]
+    app_id = ENV[env_details[:app_id]]
+    web_name = ENV[env_details[:web_name]]
+  else 
+    app_id = ENV["#{env.upcase}_APP_ID"]
+    web_name = ENV["#{env.upcase}_WEB_NAME"]
+    label = env.upcase
+  end
 
 # Ensure necessary environment variables are set
 unless app_id && web_name
