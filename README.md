@@ -30,6 +30,9 @@ STAGING_WEB_NAME=huchob-staging
 
 PRE_PROD_APP_ID=36d0e2c1-8234-4b92-b378-26200024de5f
 PRE_PROD_WEB_NAME=huchob-pre-prod
+
+CUSTOM_APP_ID=d53eea18-72ce-4d8a-bb8f-df02c948f8b2
+CUSTOM_WEB_NAME=custom-web-name
 ```
 
 
