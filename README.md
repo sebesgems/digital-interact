@@ -91,3 +91,15 @@ bundle exec digital -pre status
 # Staging
 bundle exec digital -s status
 ```
+
+### Get App Spec
+```bash
+# Production (default)
+bundle exec digital spec
+
+# pre-prod
+bundle exec digital -pre spec
+
+# Staging
+bundle exec digital -s spec
+```

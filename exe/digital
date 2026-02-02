@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 require 'fileutils'
 
-COMMANDS = %w[console logs status].freeze
+COMMANDS = %w[console logs status spec].freeze
 
 # Check if first argument is a command (default to production) or environment flag
 if COMMANDS.include?(ARGV[0])
@@ -50,7 +50,7 @@ ENVIRONMENTS = {
     app_id = ENV[env_details[:app_id]]
     web_name = ENV[env_details[:web_name]]
     label = env_details[:label]
-  else 
+  else
     env_var_prefix = env.gsub(/^-+/, '').upcase
     app_id = ENV["#{env_var_prefix.upcase}_APP_ID"]
     web_name = ENV["#{env_var_prefix.upcase}_WEB_NAME"]
@@ -88,6 +88,8 @@ when 'status'
   ].join(' ')
 when 'console'
   command = ['doctl', 'apps', 'console', app_id, web_name].join(' ')
+when 'spec'
+  command = ['doctl', 'apps', 'spec', app_id.join(' ')
 end
 
 # Execute the constructed command
