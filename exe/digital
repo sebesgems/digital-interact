@@ -89,7 +89,7 @@ when 'status'
 when 'console'
   command = ['doctl', 'apps', 'console', app_id, web_name].join(' ')
 when 'spec'
-  command = ['doctl', 'apps', 'spec', app_id.join(' ')
+  command = ['doctl', 'apps', 'spec', app_id].join(' ')
 end
 
 # Execute the constructed command
